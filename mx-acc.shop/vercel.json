@@ -1,0 +1,32 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "mx-acc.shop/index.html",
+        "use": "@vercel/static"
+      },
+      {
+        "src": "mx-acc.shop/assets/**",
+        "use": "@vercel/static"
+      },
+      {
+        "src": "mx-acc.shop/template/**",
+        "use": "@vercel/static"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/",
+        "dest": "mx-acc.shop/index.html"
+      },
+      {
+        "src": "/assets/(.*)",
+        "dest": "mx-acc.shop/assets/$1"
+      },
+      {
+        "src": "/template/(.*)",
+        "dest": "mx-acc.shop/template/$1"
+      }
+    ]
+  }
+  
